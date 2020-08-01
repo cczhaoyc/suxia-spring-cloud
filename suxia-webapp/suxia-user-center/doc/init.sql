@@ -1,0 +1,21 @@
+CREATE TABLE `suxia_user` (
+  `user_id` bigint(20) NOT NULL COMMENT '用户ID',
+  `file_id` bigint(20) DEFAULT NULL COMMENT '文件ID(图片)',
+  `wubi` varchar(20) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '五笔',
+  `username` varchar(64) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '用户账号',
+  `password` varchar(128) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '用户密码',
+  `sex_code` varchar(24) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '用户性别代码',
+  `id_type_code` varchar(24) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '证件类型代码',
+  `id_number` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '证件号码',
+  `birthday` datetime DEFAULT NULL COMMENT '出生日期',
+  `telephone` varchar(24) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '联系电话',
+  `remark` varchar(500) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '说明',
+  `pinyin` varchar(20) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '拼音',
+  `is_stopped` tinyint(1) DEFAULT NULL COMMENT '停用标志（0:在用 1:停用）',
+  `is_deleted` tinyint(1) DEFAULT NULL COMMENT '是否删除(0:否 1:是)',
+  `created_user_id` bigint(20) DEFAULT NULL COMMENT '创建人',
+  `created_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `update_user_id` bigint(20) DEFAULT NULL COMMENT '最后更新人',
+  `update_time` datetime DEFAULT NULL COMMENT '最后更新时间',
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='用户表';

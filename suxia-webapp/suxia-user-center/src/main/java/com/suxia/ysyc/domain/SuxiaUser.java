@@ -1,15 +1,9 @@
 package com.suxia.ysyc.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
-
 import java.time.LocalDateTime;
-
 import com.baomidou.mybatisplus.annotation.TableLogic;
-
 import java.io.Serializable;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -32,7 +26,6 @@ public class SuxiaUser extends Model<SuxiaUser> {
     /**
      * 用户ID
      */
-    @TableId(type = IdType.ASSIGN_UUID)
     private Long userId;
 
     /**
