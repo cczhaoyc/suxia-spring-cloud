@@ -1,9 +1,9 @@
 server:
-  port: 7676
+  port: 3232
 
 spring:
   application:
-    name: suxia-oss
+    name: suxia-api
 
   jackson:
     time-zone: GMT+8
