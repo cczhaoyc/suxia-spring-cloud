@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="94512b7b-d9ce-4618-a4f9-834d1a15662d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/DevelopmentTools/maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\DevelopmentTools\maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fTaT28YfFKV6QhmkscODhT0X2u" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="flattenModules" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="com.alibabacloud.intellij.config.EndpointConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.suxia.ysyc.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IProject\suxia-spring-cloud\suxia-webapp\suxia-user-center\src\main\resources\mapper" />
+      <recent name="D:\IProject\suxia-spring-cloud\suxia-webapp\suxia-user-center\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MyBatisPlusGenerator">
+    <configuration name="MyBatisPlusGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.suxia.ysyc.mybatisplus.MyBatisPlusGenerator" />
+      <module name="suxia-user-center" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.suxia.ysyc.mybatisplus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserCenterWebApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="suxia-user-center" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.suxia.ysyc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.suxia.ysyc.UserCenterWebApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MyBatisPlusGenerator" />
+        <item itemvalue="Spring Boot.UserCenterWebApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94512b7b-d9ce-4618-a4f9-834d1a15662d" name="Default Changelist" comment="" />
+      <created>1596244540920</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596244540920</updated>
+      <workItem from="1596244545308" duration="6500000" />
+      <workItem from="1596251069177" duration="1049000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="261" y="0" key="#Project_Structure" timestamp="1596250615649">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="261" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1596250615649" />
+    <state x="499" y="111" key="FileChooserDialogImpl" timestamp="1596245084974">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="111" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596245084974" />
+    <state width="1485" height="443" key="GridCell.Tab.0.bottom" timestamp="1596251592265">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="443" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596251592265" />
+    <state width="1485" height="443" key="GridCell.Tab.0.center" timestamp="1596251592265">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="443" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596251592265" />
+    <state width="1485" height="443" key="GridCell.Tab.0.left" timestamp="1596251592265">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="443" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596251592265" />
+    <state width="1485" height="443" key="GridCell.Tab.0.right" timestamp="1596251592265">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="443" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596251592265" />
+    <state width="1485" height="451" key="GridCell.Tab.1.bottom" timestamp="1596251055284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="451" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596251055284" />
+    <state width="1485" height="451" key="GridCell.Tab.1.center" timestamp="1596251055283">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="451" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596251055283" />
+    <state width="1485" height="451" key="GridCell.Tab.1.left" timestamp="1596251055283">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="451" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596251055283" />
+    <state width="1485" height="451" key="GridCell.Tab.1.right" timestamp="1596251055284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="451" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596251055284" />
+    <state width="1485" height="451" key="GridCell.Tab.2.bottom" timestamp="1596251055285">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="451" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596251055285" />
+    <state width="1485" height="451" key="GridCell.Tab.2.center" timestamp="1596251055284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="451" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1596251055284" />
+    <state width="1485" height="451" key="GridCell.Tab.2.left" timestamp="1596251055284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="451" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1596251055284" />
+    <state width="1485" height="451" key="GridCell.Tab.2.right" timestamp="1596251055285">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1485" height="451" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1596251055285" />
+    <state x="0" y="0" key="new project wizard" timestamp="1596247084477">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1596247084477" />
+  </component>
+</project>

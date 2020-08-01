@@ -1,0 +1,11 @@
+#spring:
+#  application:
+#    name: his-base
+#  cloud:
+#    nacos:
+#      config:
+#        server-addr: 119.45.0.227:8848
+#        file-extension: yml
+#        encode: UTF-8
+#        namespace: f157ca03-688e-48dd-a816-7c53f1594528
+#        group: HIS_BASE

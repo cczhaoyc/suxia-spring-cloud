@@ -1,0 +1,30 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: suxia-user-center
+
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/suxia?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: KevinHikariPool
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 1000
+      idle-timeout: 1000
+      max-lifetime: 10000
+      connection-test-query: SELECT 1
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:/mapper/*Mapper.xml

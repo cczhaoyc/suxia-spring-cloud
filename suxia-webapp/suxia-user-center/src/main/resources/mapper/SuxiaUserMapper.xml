@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suxia.ysyc.mapper.SuxiaUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.suxia.ysyc.domain.SuxiaUser">
+        <id column="user_id" property="userId" />
+        <result column="file_id" property="fileId" />
+        <result column="wubi" property="wubi" />
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="sex_code" property="sexCode" />
+        <result column="id_type_code" property="idTypeCode" />
+        <result column="id_number" property="idNumber" />
+        <result column="birthday" property="birthday" />
+        <result column="telephone" property="telephone" />
+        <result column="remark" property="remark" />
+        <result column="pinyin" property="pinyin" />
+        <result column="is_stopped" property="isStopped" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="created_user_id" property="createdUserId" />
+        <result column="created_time" property="createdTime" />
+        <result column="update_user_id" property="updateUserId" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+</mapper>
