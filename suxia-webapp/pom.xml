@@ -14,6 +14,10 @@
 
     <modules>
         <module>suxia-user-center</module>
+        <module>suxia-storage</module>
+        <module>suxia-order</module>
+        <module>suxia-account</module>
+        <module>suxia-business</module>
     </modules>
 
     <dependencies>
@@ -24,7 +28,6 @@
         </dependency>
 
     </dependencies>
-
 
     <build>
         <plugins>

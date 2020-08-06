@@ -32,9 +32,9 @@
 | com.alibaba.easyexcel                  | 2.2.6         |
 | redisson-spring-boot-starter           | 3.11.5        |
 | spring-cloud-starter-alibaba-sentinel  | 2.2.1.RELEASE |
-| easyexcel                              | 2.2.6         |
 | redisson                               | 3.11.5        |
 | xxl-job-core                           | 2.2.0         |
+| hutool-all                             | 5.3.10        |
 |                                        |               |
 
 ------

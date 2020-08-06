@@ -17,7 +17,12 @@ import org.springframework.context.annotation.Configuration;
 public class MybatisPlusConfig {
 
     /**
-     * 配置分页插件
+     * <p>
+     * 分页插件配置
+     * </p>
+     *
+     * @author cczhaoyc@163.com
+     * @date 2020/8/6 21:24
      */
     @Bean
     public PaginationInterceptor paginationInterceptor() {

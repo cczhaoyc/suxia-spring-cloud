@@ -1,5 +1,10 @@
 server:
   port: 7676
+  undertow:
+    io-threads: 8
+    worker-threads: 64
+    buffer-size: 1024
+    direct-buffers: true
 
 spring:
   application:
