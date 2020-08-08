@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author cczhaoyc@163.com
- * @since 2020-08-01
+ * @since 2020-08-07
  */
 public interface SuxiaUserService extends IService<SuxiaUser> {
 

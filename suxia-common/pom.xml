@@ -95,6 +95,12 @@
             <artifactId>oshi-core</artifactId>
         </dependency>
 
+        <!-- springfox OpenApi接口文档-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+        </dependency>
+
 
     </dependencies>
 </project>

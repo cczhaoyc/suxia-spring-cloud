@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author cczhaoyc@163.com
- * @since 2020-08-01
+ * @since 2020-08-07
  */
 public interface SuxiaUserMapper extends BaseMapper<SuxiaUser> {
 

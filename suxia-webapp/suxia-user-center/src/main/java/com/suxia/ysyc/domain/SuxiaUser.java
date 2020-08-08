@@ -1,7 +1,5 @@
 package com.suxia.ysyc.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 
 import java.time.LocalDateTime;
@@ -20,7 +18,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author cczhaoyc@163.com
- * @since 2020-08-01
+ * @since 2020-08-07
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -30,20 +28,14 @@ public class SuxiaUser extends Model<SuxiaUser> {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用户ID
+     * 用户Id
      */
-    @TableId(type = IdType.INPUT)
     private Long userId;
 
     /**
-     * 文件ID(图片)
+     * 文件Id(图片)
      */
     private Long fileId;
-
-    /**
-     * 五笔
-     */
-    private String wubi;
 
     /**
      * 用户账号
@@ -81,9 +73,9 @@ public class SuxiaUser extends Model<SuxiaUser> {
     private String telephone;
 
     /**
-     * 说明
+     * 五笔
      */
-    private String remark;
+    private String wubi;
 
     /**
      * 拼音
@@ -94,6 +86,11 @@ public class SuxiaUser extends Model<SuxiaUser> {
      * 停用标志（0:在用 1:停用）
      */
     private Boolean isStopped;
+
+    /**
+     * 说明
+     */
+    private String remark;
 
     /**
      * 是否删除(0:否 1:是)

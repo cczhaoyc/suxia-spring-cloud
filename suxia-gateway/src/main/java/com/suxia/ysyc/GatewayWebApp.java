@@ -1,6 +1,5 @@
 package com.suxia.ysyc;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,7 +13,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2020/8/1 13:36
  */
 @SpringBootApplication
-@MapperScan("com.suxia.ysyc.mapper")
 public class GatewayWebApp {
 
     public static void main(String[] args) {

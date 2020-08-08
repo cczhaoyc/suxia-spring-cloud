@@ -1,12 +1,14 @@
 package com.suxia.ysyc.controller;
 
 
+import com.suxia.ysyc.domain.RestResult;
 import com.suxia.ysyc.service.SuxiaUserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,18 +17,26 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author cczhaoyc@163.com
- * @since 2020-08-01
+ * @since 2020-08-07
  */
 @RestController
 @RequestMapping("/user")
+@Api(value = "系统用户", tags = "系统用户接口")
 public class SuxiaUserController {
 
     @Autowired
     private SuxiaUserService suxiaUserService;
 
     @PostMapping
-    public void saveUser() {
+    @ApiOperation(value = "新增用户")
+    public RestResult<String> saveUser(String username, String password) {
+        return RestResult.success(username + ":" + password);
+    }
 
+    @PutMapping
+    @ApiOperation(value = "修改用户")
+    public RestResult<String> saveUser(Long id, String password) {
+        return RestResult.success(id + ":" + password);
     }
 
 }

@@ -1,3 +1,43 @@
+##===================== 基础配置 ====================##
+suxia:
+  # 开启snowflake
+  snowflake:
+    enable: true
+  security:
+    oauth2:
+      enable: true
+    # 校验码
+    verify-identify: $2a$10$CIcpu6Vz3kkXGVREYMB5/.GZd1se/JGZCo/bs0Jjbcd5gAfLvUxya
+    # 客户端身份校验
+    client-id: suxia-client
+    client-secret: suxia@2020!
+    grant-type: password
+
+  # 开启redis
+  redis:
+    prefix: ${spring.application.name}
+    enable: true
+  # rabbitmq
+  rabbitmq:
+    enable: true
+
+  # swagger配置
+  swagger:
+    enable: true
+    title: 库存中心
+    description: 库存中心接口
+    name: 苏夏未来-云舞之森
+    url: http://suxia.iask.in
+    email: cczhaoyc@163.com
+    version: 1.0.0
+    base-package: com.suxia.ysyc.controller
+  ## 开启调度任务
+  xxl:
+    job:
+      enable: true
+      port: 20200
+
+##===================== 系统配置 ====================##
 server:
   port: 56560
   undertow:
