@@ -10,6 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>suxia-storage</artifactId>
+    <description>库存服务</description>
+    <url>cczhaoyc@163.com</url>
 
 
 </project>

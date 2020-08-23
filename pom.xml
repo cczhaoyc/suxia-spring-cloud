@@ -8,6 +8,8 @@
     <artifactId>suxia-spring-cloud</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
+    <description>苏夏未来·云舞之森</description>
+    <url>cczhaoyc@163.com</url>
 
     <modules>
         <module>suxia-common</module>

@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>suxia-business</artifactId>
-
+    <description>业务服务</description>
+    <url>cczhaoyc@163.com</url>
 
 </project>

@@ -11,6 +11,8 @@
 
     <artifactId>suxia-webapp</artifactId>
     <packaging>pom</packaging>
+    <description>系统服务</description>
+    <url>cczhaoyc@163.com</url>
 
     <modules>
         <module>suxia-user-center</module>

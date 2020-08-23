@@ -10,6 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>suxia-uaac</artifactId>
+    <description>基于OAuth2的认证服务器</description>
+    <url>cczhaoyc@163.com</url>
 
     <dependencies>
         <dependency>
