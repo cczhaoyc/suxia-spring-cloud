@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        encode: UTF-8
+        namespace: 1f6c92ad-49cd-45b8-88ad-90f996a69bc2
+        group: DEFAULT_GROUP
+        shared-configs: nacos.yml,redis.yml,datasource.yml,elasticsearch.yml

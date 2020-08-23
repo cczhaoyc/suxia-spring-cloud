@@ -10,7 +10,7 @@ suxia:
     verify-identify: $2a$10$CIcpu6Vz3kkXGVREYMB5/.GZd1se/JGZCo/bs0Jjbcd5gAfLvUxya
     # 客户端身份校验
     client-id: suxia-client
-    client-secret: suxia@2020!
+    client-secret: ywzs@1992!
     grant-type: password
 
   # 开启redis
