@@ -4,30 +4,29 @@ import com.suxia.ysyc.enums.RestTypeEnum;
 
 /**
  * <p>
- * 业务异常描述
+ * 异常枚举
  * </p>
  *
  * @author cczhaoyc@163.com
  * @version v_1.0.0
- * @date 2020/8/9 10:48
+ * @date 2020/8/9 10:50
  */
-public enum BusinessExceptionEnum {
+public enum RestExceptionEnum {
 
     /**
-     * 业务异常
+     * 系统异常编码从10000-19999，描述自定义
      */
-    EX_80000(RestExceptionEnum.Business_EX_START_80000.getType(), RestExceptionEnum.Business_EX_START_80000.getCode(), RestExceptionEnum.Business_EX_START_80000.getMessage()),
-
+    SYSTEM_EX_START_10000(RestTypeEnum.error, 10000, "系统异常"),
     /**
-     * 用户名不能为空
+     * 业务异常编码从80000-99999，描述自定义
      */
-    EX_80001(RestTypeEnum.warn, 80001, "用户名不能为空");
+    Business_EX_START_80000(RestTypeEnum.warn, 80000, "业务异常");
 
+    private RestTypeEnum type;
     private Integer code;
     private String message;
-    private RestTypeEnum type;
 
-    BusinessExceptionEnum(RestTypeEnum type, Integer code, String message) {
+    RestExceptionEnum(RestTypeEnum type, Integer code, String message) {
         this.type = type;
         this.code = code;
         this.message = message;
@@ -56,5 +55,4 @@ public enum BusinessExceptionEnum {
     public void setMessage(String message) {
         this.message = message;
     }
-
 }

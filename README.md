@@ -39,7 +39,7 @@
 |              google-guava              |   29.0-jre    |
 |              google-zxing              |     3.4.0     |
 |               javax-mail               |     1.6.2     |
-|                                        |               |
+|   spring-cloud-starter-stream-rabbit   | 3.0.6.RELEASE |
 |                                        |               |
 |                                        |               |
 

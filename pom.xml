@@ -60,7 +60,6 @@
 
     <dependencyManagement>
         <dependencies>
-
             <!-- 添加spring-boot-starter-web，默认使用tomcat作为web容器 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -91,6 +90,13 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <!-- stream-rabbit -->
+                        <groupId>org.springframework.cloud</groupId>
+                        <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <!-- mysql驱动 -->

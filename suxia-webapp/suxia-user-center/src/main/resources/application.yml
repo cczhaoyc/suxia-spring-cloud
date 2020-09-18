@@ -58,12 +58,49 @@ spring:
     name: suxia-user-center
 
   cloud:
+    # stream-rabbit配置
+    stream:
+      binders: # 绑定消息中间件，可以同时绑定多个不同的中间件
+        suxia-rabbit: # 中间件配置名称(唯一)
+          type: rabbit # 指定具体的中间件，可以是rabbit、kafka、redis等
+          environment:
+            spring:
+              rabbitmq: # rabbitmq配置
+                addresses: amqps://qcpnuhrr:RZvXVxtB1I8QYkhe5DtqAz3nefm1KiGJ@porpoise.rmq.cloudamqp.com/qcpnuhrr
+      bindings: # 绑定消息通道，可以同时绑定多个不同的消息通道
+        output-order: # 消息通道名称，此处是一个生产者
+          binder: suxia-rabbit # 指定消息中间件（spring.stream.binders.his-rabbit）
+          destination: suxia.exchange.stream # 相当于rabbitmq中交换机名称，交换机模式默认是topic
+          content-type: application/json # 消息类型：text/plain(普通文本)，application/json(JSON消息)
+          exchange-type: fanout
+          producer: # 生产者
+            exchange-type: fanout
+            partition-count: 10 # 指定参与消息分区的消费端节点数量为10(0-9)个
+            partition-key-expression: "0" # 指定消费者的实例索引(consumer.instance-index),此处必须用""括起来,否者启动就会报错
+        input-order: # 消息通道名称，此处是一个消费者
+          binder: suxia-rabbit # 指定消息中间件（spring.stream.binders.his-rabbit）
+          destination: suxia.exchange.stream # 相当于rabbitmq中交换机名称，交换机模式默认是topic，与生产者绑定同一个交换机
+          content-type: application/json # 消息类型：text/plain(普通文本)，application/json(JSON消息)
+          group: user-center.group # 分组名称，消费者必须指定，可持久化消息并且分组名称相同的消费者，不会重复消费
+          consumer: # 消费者
+            exchange-type: fanout
+            partitioned: true # 开启分区
+            instance-index: 0 # 实例索引，相当于rabbitmq中RoutingKey，此时改消费者接收producer.partition-key-expression=0的消息
+            auto-bind-dlq: true
+            republish-to-dlq: true
+#            acknowledge-mode: manual
+            dead-letter-queue-name: dead-letter-queue-name
+            dead-letter-exchange: dead-letter-exchange
+            max-attempts: 2
+
+    # nacos配置
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
         group: DEFAULT_GROUP
         namespace: 1f6c92ad-49cd-45b8-88ad-90f996a69bc2
 
+  # 统一时间格式
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
@@ -76,7 +113,7 @@ spring:
     password: ywzs@1992!
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
-      pool-name: KevinHikariPool
+      pool-name: SuxiaHikariPool
       maximum-pool-size: 10
       minimum-idle: 2
       connection-timeout: 1000
@@ -102,6 +139,12 @@ spring:
   elasticsearch:
     rest:
       uris: ["http://127.0.0.1:9200"]
+
+  # rabbitmq配置
+#  rabbitmq:
+#    virtual-host: qcpnuhrr
+#    connection-timeout: 0
+#    addresses: amqps://qcpnuhrr:RZvXVxtB1I8QYkhe5DtqAz3nefm1KiGJ@porpoise.rmq.cloudamqp.com/qcpnuhrr
 
 mybatis-plus:
   configuration:

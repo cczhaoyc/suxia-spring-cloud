@@ -52,6 +52,12 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>-->
 
+        <!-- stream-rabbit -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

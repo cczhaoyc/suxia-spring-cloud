@@ -2,7 +2,9 @@ package com.suxia.ysyc.controller;
 
 
 import com.suxia.ysyc.domain.RestResult;
+import com.suxia.ysyc.dto.SuxiaUserDTO;
 import com.suxia.ysyc.service.SuxiaUserService;
+import com.suxia.ysyc.vo.SuxiaUserVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +31,8 @@ public class SuxiaUserController {
 
     @PostMapping
     @ApiOperation(value = "新增用户")
-    public RestResult<String> saveUser(String username, String password) {
-        return RestResult.success(username + ":" + password);
+    public RestResult<SuxiaUserVO> saveUser(SuxiaUserDTO userDTO) {
+        return RestResult.success(suxiaUserService.addSuxiaUser(userDTO));
     }
 
     @PutMapping

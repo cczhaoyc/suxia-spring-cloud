@@ -1,6 +1,7 @@
 package com.suxia.ysyc.exception;
 
 
+import com.suxia.ysyc.enums.RestTypeEnum;
 import com.suxia.ysyc.exception.enums.BusinessExceptionEnum;
 
 /**
@@ -18,39 +19,56 @@ public class BusinessException extends RuntimeException {
 
     private Integer code;
     private BusinessExceptionEnum businessExceptionEnum;
+    private RestTypeEnum type;
 
     public BusinessException() {
         super(BusinessExceptionEnum.EX_80000.getMessage());
         this.code = BusinessExceptionEnum.EX_80000.getCode();
+        this.type = RestTypeEnum.warn;
     }
 
     public BusinessException(String message) {
         super(message);
+        this.code = BusinessExceptionEnum.EX_80000.getCode();
+        this.type = RestTypeEnum.warn;
     }
 
     public BusinessException(Integer code, String message) {
         super(message);
         this.code = code;
+        this.type = RestTypeEnum.warn;
     }
 
     public BusinessException(BusinessExceptionEnum businessExceptionEnum) {
         super(businessExceptionEnum.getMessage());
         this.code = businessExceptionEnum.getCode();
+        this.type = businessExceptionEnum.getType();
     }
 
     public BusinessException(BusinessExceptionEnum businessExceptionEnum, String message) {
         super(businessExceptionEnum.getMessage() + " " + message);
         this.code = businessExceptionEnum.getCode();
+        this.type = businessExceptionEnum.getType();
     }
 
     public BusinessException(BusinessExceptionEnum businessExceptionEnum, Throwable cause) {
         super(businessExceptionEnum.getMessage(), cause);
         this.code = businessExceptionEnum.getCode();
+        this.type = businessExceptionEnum.getType();
     }
 
     public BusinessException(Integer code, String message, Throwable cause) {
         super(message, cause);
         this.code = code;
+        this.type = RestTypeEnum.warn;
+    }
+
+    public RestTypeEnum getType() {
+        return type;
+    }
+
+    public void setType(RestTypeEnum type) {
+        this.type = type;
     }
 
     public Integer getCode() {

@@ -1,6 +1,8 @@
 package com.suxia.ysyc.dto;
 
+import cn.hutool.core.date.DatePattern;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -29,7 +31,7 @@ public class SuxiaUserDTO implements Serializable {
     private Long fileId;
 
     /**
-     * 用户账号
+     * 用户名
      */
     private String username;
 
@@ -56,6 +58,7 @@ public class SuxiaUserDTO implements Serializable {
     /**
      * 出生日期
      */
+    @DateTimeFormat(pattern = DatePattern.NORM_DATETIME_PATTERN)
     private LocalDateTime birthday;
 
     /**

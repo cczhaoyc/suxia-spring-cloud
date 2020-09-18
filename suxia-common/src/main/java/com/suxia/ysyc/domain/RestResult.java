@@ -2,6 +2,7 @@ package com.suxia.ysyc.domain;
 
 import cn.hutool.core.date.DatePattern;
 import cn.hutool.core.date.LocalDateTimeUtil;
+import com.suxia.ysyc.enums.RestTypeEnum;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -24,15 +25,25 @@ public class RestResult<T> implements Serializable {
     public static final Integer ERROR_CODE = 500;
     public static final String ERROR_MESSAGE = "失败";
 
+    private String type;
     private String message;
     private Integer code;
     private T data;
     private String time = LocalDateTimeUtil.format(LocalDateTime.now(), DatePattern.NORM_DATETIME_PATTERN);
 
+    public static <T> RestResult<T> create(Integer code, String message, RestTypeEnum type) {
+        RestResult<T> result = new RestResult<>();
+        result.setCode(code);
+        result.setMessage(message);
+        result.setType(type.name());
+        return result;
+    }
+
     public static <T> RestResult<T> success() {
         RestResult<T> result = new RestResult<>();
         result.setCode(SUCCESS_CODE);
         result.setMessage(SUCCESS_MESSAGE);
+        result.setType(RestTypeEnum.success.name());
         return result;
     }
 
@@ -41,6 +52,7 @@ public class RestResult<T> implements Serializable {
         result.setData(data);
         result.setCode(SUCCESS_CODE);
         result.setMessage(SUCCESS_MESSAGE);
+        result.setType(RestTypeEnum.success.name());
         return result;
     }
 
@@ -49,6 +61,7 @@ public class RestResult<T> implements Serializable {
         result.setData(data);
         result.setCode(SUCCESS_CODE);
         result.setMessage(message);
+        result.setType(RestTypeEnum.success.name());
         return result;
     }
 
@@ -56,6 +69,7 @@ public class RestResult<T> implements Serializable {
         RestResult<T> result = new RestResult<>();
         result.setCode(code);
         result.setMessage(message);
+        result.setType(RestTypeEnum.success.name());
         return result;
     }
 
@@ -64,6 +78,16 @@ public class RestResult<T> implements Serializable {
         result.setData(data);
         result.setCode(code);
         result.setMessage(message);
+        result.setType(RestTypeEnum.success.name());
+        return result;
+    }
+
+    public static <T> RestResult<T> success(Integer code, String message, T data, RestTypeEnum type) {
+        RestResult<T> result = new RestResult<>();
+        result.setData(data);
+        result.setCode(code);
+        result.setMessage(message);
+        result.setType(type.name());
         return result;
     }
 
@@ -71,6 +95,7 @@ public class RestResult<T> implements Serializable {
         RestResult<T> result = new RestResult<>();
         result.setMessage(ERROR_MESSAGE);
         result.setCode(ERROR_CODE);
+        result.setType(RestTypeEnum.error.name());
         return result;
     }
 
@@ -79,6 +104,7 @@ public class RestResult<T> implements Serializable {
         result.setData(data);
         result.setMessage(ERROR_MESSAGE);
         result.setCode(ERROR_CODE);
+        result.setType(RestTypeEnum.error.name());
         return result;
     }
 
@@ -87,6 +113,7 @@ public class RestResult<T> implements Serializable {
         result.setData(data);
         result.setCode(ERROR_CODE);
         result.setMessage(message);
+        result.setType(RestTypeEnum.error.name());
         return result;
     }
 
@@ -94,6 +121,7 @@ public class RestResult<T> implements Serializable {
         RestResult<T> result = new RestResult<>();
         result.setCode(code);
         result.setMessage(message);
+        result.setType(RestTypeEnum.error.name());
         return result;
     }
 
@@ -102,7 +130,26 @@ public class RestResult<T> implements Serializable {
         result.setData(data);
         result.setCode(code);
         result.setMessage(message);
+        result.setType(RestTypeEnum.error.name());
         return result;
+    }
+
+    public static <T> RestResult<T> error(Integer code, String message, T data, RestTypeEnum type) {
+        RestResult<T> result = new RestResult<>();
+        result.setData(data);
+        result.setCode(code);
+        result.setMessage(message);
+        result.setType(type.name());
+        return result;
+    }
+
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public Integer getCode() {

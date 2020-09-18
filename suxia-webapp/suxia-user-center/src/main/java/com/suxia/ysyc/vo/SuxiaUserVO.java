@@ -1,5 +1,10 @@
 package com.suxia.ysyc.vo;
 
+import cn.hutool.core.date.DatePattern;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -15,6 +20,7 @@ import java.time.LocalDateTime;
  * @date 2020/8/7 14:53
  */
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SuxiaUserVO implements Serializable {
 
     private static final long serialVersionUID = 6784815099074915220L;
@@ -22,11 +28,13 @@ public class SuxiaUserVO implements Serializable {
     /**
      * 用户Id
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long userId;
 
     /**
      * 文件Id(图片)
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long fileId;
 
     /**
@@ -57,6 +65,7 @@ public class SuxiaUserVO implements Serializable {
     /**
      * 出生日期
      */
+    @JsonFormat(pattern = DatePattern.NORM_DATETIME_PATTERN, timezone = "GMT+8")
     private LocalDateTime birthday;
 
     /**

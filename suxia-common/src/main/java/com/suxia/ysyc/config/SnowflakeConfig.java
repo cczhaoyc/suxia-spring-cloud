@@ -38,6 +38,7 @@ public class SnowflakeConfig {
     public static final String WORKER_ID = "snowflake";
     public static final String IP = "ip";
     public static final String ID = "id";
+
     @Value("${server.port}")
     private Integer port;
 
