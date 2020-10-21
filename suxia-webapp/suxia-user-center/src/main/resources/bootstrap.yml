@@ -2,7 +2,7 @@ spring:
   cloud:
     nacos:
       config:
-        server-addr: 106.12.171.89:8848
+        server-addr: xxxx
         file-extension: yml
         encode: UTF-8
         namespace: 1f6c92ad-49cd-45b8-88ad-90f996a69bc2

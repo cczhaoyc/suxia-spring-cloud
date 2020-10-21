@@ -1,4 +1,4 @@
-package com.suxia.ysyc.config;
+package com.suxia.ysyc.service;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
  */
 @Configuration
 @ConditionalOnProperty(prefix = AutoStarterConstants.REDIS_PREFIX, name = AutoStarterConstants.ENABLE_NAME, havingValue = AutoStarterConstants.TRUE_HAVING_VALUE)
-public class RedisTemplateConfig {
+public class RedisService {
 
     private final Logger LOG = LoggerFactory.getLogger(this.getClass());
 

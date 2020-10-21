@@ -1,6 +1,7 @@
 package com.suxia.ysyc.controller;
 
 
+import com.suxia.ysyc.service.RedisService;
 import com.suxia.ysyc.domain.RestResult;
 import com.suxia.ysyc.dto.SuxiaUserDTO;
 import com.suxia.ysyc.service.SuxiaUserService;
@@ -28,6 +29,8 @@ public class SuxiaUserController {
 
     @Autowired
     private SuxiaUserService suxiaUserService;
+    @Autowired
+    private RedisService redisService;
 
     @PostMapping
     @ApiOperation(value = "新增用户")
@@ -41,4 +44,17 @@ public class SuxiaUserController {
         return RestResult.success(id + ":" + password);
     }
 
+    /**
+     * <p>
+     * redis测试
+     * </p>
+     *
+     * @author cczhaoyc@163.com
+     * @date 2020/10/15 21:38
+     */
+    @PostMapping("/redis")
+    @ApiOperation(value = "redis测试")
+    public RestResult<Boolean> redisService(String key, String value) {
+        return RestResult.success(redisService.put(key, value));
+    }
 }

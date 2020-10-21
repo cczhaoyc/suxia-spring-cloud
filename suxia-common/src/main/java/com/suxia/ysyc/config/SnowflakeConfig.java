@@ -5,6 +5,7 @@ import cn.hutool.core.util.IdUtil;
 import com.suxia.ysyc.constants.AutoStarterConstants;
 import com.suxia.ysyc.domain.SnowflakeWorker;
 import com.suxia.ysyc.exception.BusinessException;
+import com.suxia.ysyc.service.RedisService;
 import com.suxia.ysyc.utils.PublicNetIpUtil;
 import com.suxia.ysyc.utils.StringJoinerUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -43,7 +44,7 @@ public class SnowflakeConfig {
     private Integer port;
 
     @Resource
-    private RedisTemplateConfig redisTemplateConfig;
+    private RedisService redisService;
 
     /**
      * <p>
@@ -76,7 +77,7 @@ public class SnowflakeConfig {
             throw new BusinessException("Snowflake初始化异常，serverIp=" + serverIp + "，serverPort=" + port);
         }
         String ipKey = StringJoinerUtil.build(WORKER_ID, IP, serverIp, String.valueOf(port));
-        SnowflakeWorker oldWorkerId = redisTemplateConfig.getNoRedisKeyPrefix(ipKey, SnowflakeWorker.class);
+        SnowflakeWorker oldWorkerId = redisService.getNoRedisKeyPrefix(ipKey, SnowflakeWorker.class);
         if (oldWorkerId != null) {
             log.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" +
                     "[Snowflake workerId]已存在，ip:port=[" + serverIp + ":" + port + "]" +
@@ -88,7 +89,7 @@ public class SnowflakeConfig {
         }
         // ip:port不存在时自动生成workId
         SnowflakeWorker newWorkerId = this.getNewWorkerId();
-        redisTemplateConfig.putForeverNoRedisKeyPrefix(ipKey, newWorkerId);
+        redisService.putForeverNoRedisKeyPrefix(ipKey, newWorkerId);
 
         log.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" +
                 "[Snowflake workerId]自动生成，ip:port=[" + serverIp + ":" + port + "]" +
@@ -112,11 +113,11 @@ public class SnowflakeConfig {
         SnowflakeWorker newSnowflakeWorkerId = this.getNewId();
         // 去验证workId是否存在
         String idKey = StringJoinerUtil.build(WORKER_ID, ID, String.valueOf(newSnowflakeWorkerId.getWorkerId()), String.valueOf(newSnowflakeWorkerId.getDataCenterId()));
-        SnowflakeWorker redisSnowflakeWorkerId = redisTemplateConfig.getNoRedisKeyPrefix(idKey, SnowflakeWorker.class);
+        SnowflakeWorker redisSnowflakeWorkerId = redisService.getNoRedisKeyPrefix(idKey, SnowflakeWorker.class);
         if (redisSnowflakeWorkerId != null) {
             this.getNewWorkerId();
         }
-        redisTemplateConfig.putForeverNoRedisKeyPrefix(idKey, newSnowflakeWorkerId);
+        redisService.putForeverNoRedisKeyPrefix(idKey, newSnowflakeWorkerId);
         return newSnowflakeWorkerId;
     }
 
