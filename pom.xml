@@ -41,7 +41,7 @@
         <google.guava.version>29.0-jre</google.guava.version>
         <javax.mail.version>1.6.2</javax.mail.version>
         <emoji-java.version>5.1.1</emoji-java.version>
-        <bcprov-jdk15on.version>1.66</bcprov-jdk15on.version>
+        <bcprov-jdk15on.version>1.67</bcprov-jdk15on.version>
         <oshi-core.version>5.2.2</oshi-core.version>
         <springfox.version>3.0.0</springfox.version>
         <commons-lang3.version>3.11</commons-lang3.version>
