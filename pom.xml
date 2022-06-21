@@ -27,7 +27,7 @@
         <spring-boot-starter-web.version>2.2.9.RELEASE</spring-boot-starter-web.version>
         <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
-        <mysql.connector.version>8.0.19</mysql.connector.version>
+        <mysql.connector.version>8.0.28</mysql.connector.version>
         <mybatis-plus.version>3.3.1</mybatis-plus.version>
         <lombok.verison>1.18.12</lombok.verison>
         <seata-spring-boot-starter.version>1.3.0</seata-spring-boot-starter.version>
